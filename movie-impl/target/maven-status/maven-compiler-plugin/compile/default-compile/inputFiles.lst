@@ -1,0 +1,8 @@
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/MovieModule.java
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/events/MovieEventTag.java
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/MovieEntity.java
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/states/MovieStates.java
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/events/MovieEventProcessor.java
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/MovieServiceImpl.java
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/commands/MovieCommand.java
+/home/abhishek/Documents/lagom-template/movie-impl/src/main/java/events/MovieEvent.java
