@@ -6,7 +6,7 @@ Building Reactive Java 8 application with Lagom framework. This is a classic CRU
 2. Maven 4.0
 
 # Getting the Project
-https://github.com/deepakmehra10/lagom-template.git
+https://github.com/knoldus/lagom-java-crud.git
 
 ####Create executable jar: 
 `mvn package -Dmaven.skip.test=true`
