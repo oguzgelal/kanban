@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170427233941"/>
+		date="20170427235422"/>
 	<dependencies>
 		<module organisation="org.projectlombok" name="lombok">
 			<revision name="1.16.10" status="release" pubdate="20160715024049" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://projectlombok.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="60">

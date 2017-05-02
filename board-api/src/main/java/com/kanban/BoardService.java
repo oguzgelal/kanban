@@ -5,6 +5,7 @@ import akka.NotUsed;
 import com.lightbend.lagom.javadsl.api.Descriptor;
 import com.lightbend.lagom.javadsl.api.Service;
 import com.lightbend.lagom.javadsl.api.ServiceCall;
+import org.pcollections.PSequence;
 
 import java.util.Optional;
 
@@ -41,7 +42,8 @@ public interface BoardService extends Service {
      * @param id
      * @return
      */
-    ServiceCall<NotUsed, Source<Board, ?>> getBoards();
+    //ServiceCall<NotUsed, Source<Board, ?>> getBoards();
+    ServiceCall<NotUsed, PSequence<Board>> getBoards();
 
     /**
      * @return

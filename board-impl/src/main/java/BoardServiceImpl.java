@@ -64,16 +64,31 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
+    public ServiceCall<NotUsed, PSequence<Board>> getBoards() {
+        return request -> {
+        CompletionStage str = session.selectAll("SELECT * FROM boards")
+        .thenApply(rows -> rows.stream().map(row -> Board.builder()
+                .id(row.getString("id"))
+                .name(row.getString("name"))
+                .state(row.getString("state"))
+                .build()));
+            return str;
+        };
+    }
+
+    /*
+    @Override
     public ServiceCall<NotUsed, Source<Board, ?>> getBoards() {
         return request -> CompletableFuture.completedFuture(session.select("SELECT * FROM boards")
                 .map(row -> new Board(row.getString("id"), row.getString("name"), row.getString("state"))));
-        /*
+        
         return request -> {
         Source<Board, ?> x = session.select("SELECT * FROM boards")
             .map(row -> new Board(row.getString("id"), row.getString("name"), row.getString("state")));
         };
-        */
+        
     }
+    */
 
     /**
      * @return

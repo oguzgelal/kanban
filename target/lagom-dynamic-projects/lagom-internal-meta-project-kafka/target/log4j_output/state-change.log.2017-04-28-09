@@ -1,0 +1,1 @@
+[2017-04-28 09:56:15,673] TRACE Controller 0 epoch 4 received response {error_code=0} for a request sent to broker dhcp-163-5.vub.ac.be:9092 (id: 0 rack: null) (state.change.logger)

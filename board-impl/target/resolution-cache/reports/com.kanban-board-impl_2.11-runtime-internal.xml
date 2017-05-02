@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, dev-mode"
-		date="20170427233943"/>
+		date="20170427235423"/>
 	<dependencies>
 		<module organisation="com.lightbend.lagom" name="lagom-javadsl-persistence-cassandra_2.11">
 			<revision name="1.3.2" status="release" pubdate="20170413081010" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://www.lagomframework.com/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="96">
@@ -874,7 +874,7 @@
 			</revision>
 		</module>
 		<module organisation="com.kanban" name="board-api_2.11">
-			<revision name="1.0-SNAPSHOT" status="integration" pubdate="20170427233941" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+			<revision name="1.0-SNAPSHOT" status="integration" pubdate="20170427235422" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="com.kanban" name="board-impl_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0-SNAPSHOT" rev-constraint-default="1.0-SNAPSHOT" rev-constraint-dynamic="1.0-SNAPSHOT" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
