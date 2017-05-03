@@ -27,6 +27,11 @@ public interface BoardService extends Service {
     ServiceCall<Board, Done> newBoard();
 
     /**
+     * THIS SHOULD BE THE FINAL CREATE BOARD METHOD
+     */
+    ServiceCall<NotUsed, Board> createBoard(String title);
+
+    /**
      * @param id
      * @return
      */
@@ -53,7 +58,8 @@ public interface BoardService extends Service {
 
         return named("board")
                 .withCalls(restCall(GET, "/api/board/:id", this::board),
-                        restCall(POST, "/api/board", this::newBoard),
+                        // restCall(POST, "/api/board", this::newBoard),
+                        restCall(POST, "/api/board/:title", this::createBoard),
                         restCall(PUT, "/api/board/:id", this::updateBoard),
                         restCall(DELETE, "/api/board/:id", this::deleteBoard),
                         restCall(GET, "/api/boards", this::getBoards))

@@ -22,4 +22,11 @@ public final class Board {
         this.name = name;
         this.state = state;
     }
+
+    public Board(String name){
+        //Create a random id (quite awful this but kassandra is a monster on its own and there's no time to learn it properly.')
+        this.id = Long.toString(System.currentTimeMillis());
+        this.name = name;
+        this.state = "CREATED";
+    }
 }
