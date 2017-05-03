@@ -1,133 +1,170 @@
-2017-04-28 11:14:20,741 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-17 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:14:20,752 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-17 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:14:21,825 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-16 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:14:22,022 [INFO] from events.BoardEventProcessor in ForkJoinPool-1-worker-1 -  aggregateTags method ... 
-2017-04-28 11:14:22,427 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-16 -  buildHandler method ... 
-2017-04-28 11:14:24,160 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-17 -  buildHandler method ... 
-2017-04-28 11:21:00,713 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-5 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-1/flow-5-1-unknown-operation#-1979893844]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-1/flow-5-1-unknown-operation#-1979893844]] terminated abruptly
-2017-04-28 11:21:01,088 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-4 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:21:01,089 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-4 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:21:01,091 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:21:01,106 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-16 -  aggregateTags method ... 
-2017-04-28 11:21:01,154 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-19 -  buildHandler method ... 
-2017-04-28 11:21:03,132 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-16 -  buildHandler method ... 
-2017-04-28 11:39:12,302 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-4 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-4/flow-5-1-unknown-operation#1814490947]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-4/flow-5-1-unknown-operation#1814490947]] terminated abruptly
-2017-04-28 11:39:12,612 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-5 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:39:12,612 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-5 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:39:12,615 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-5 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:39:12,633 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-17 -  aggregateTags method ... 
-2017-04-28 11:39:12,694 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
-2017-04-28 11:39:14,660 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
-2017-04-28 11:39:24,097 [ERROR] from board in board-impl-application-akka.actor.default-dispatcher-5 - Exception in RestCallId{method=GET, pathPattern='/api/boards'}
-com.lightbend.lagom.javadsl.api.deser.SerializationException: Incompatible types: declared root type ([collection type; class org.pcollections.PSequence, contains [simple type, class com.kanban.Board]]) vs java.util.stream.ReferencePipeline$3
-	at com.lightbend.lagom.javadsl.jackson.JacksonSerializerFactory$JacksonMessageSerializer$JacksonSerializer.serialize(JacksonSerializerFactory.java:109) ~[lagom-javadsl-jackson_2.11-1.3.2.jar:1.3.2]
-	at com.lightbend.lagom.javadsl.jackson.JacksonSerializerFactory$JacksonMessageSerializer$JacksonSerializer.serialize(JacksonSerializerFactory.java:91) ~[lagom-javadsl-jackson_2.11-1.3.2.jar:1.3.2]
-	at com.lightbend.lagom.internal.javadsl.client.JavadslServiceApiBridge$class.negotiatedSerializerSerialize(JavadslServiceApiBridge.scala:95) ~[lagom-javadsl-client_2.11-1.3.2.jar:1.3.2]
-	at com.lightbend.lagom.internal.javadsl.server.JavadslServiceRouter.negotiatedSerializerSerialize(JavadslServerBuilder.scala:129) ~[lagom-javadsl-server_2.11-1.3.2.jar:1.3.2]
-	at com.lightbend.lagom.internal.javadsl.server.JavadslServiceRouter.negotiatedSerializerSerialize(JavadslServerBuilder.scala:129) ~[lagom-javadsl-server_2.11-1.3.2.jar:1.3.2]
-	at com.lightbend.lagom.internal.server.ServiceRouter$$anonfun$com$lightbend$lagom$internal$server$ServiceRouter$$handleServiceCall$1$$anonfun$apply$11.apply(ServiceRouter.scala:154) ~[lagom-server_2.11-1.3.2.jar:1.3.2]
-	at com.lightbend.lagom.internal.server.ServiceRouter$$anonfun$com$lightbend$lagom$internal$server$ServiceRouter$$handleServiceCall$1$$anonfun$apply$11.apply(ServiceRouter.scala:150) ~[lagom-server_2.11-1.3.2.jar:1.3.2]
-	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237) ~[scala-library-2.11.8.jar:1.0.1]
+2017-05-03 18:15:40,597 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-16 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:15:40,616 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-16 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:15:41,416 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-5 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:15:41,566 [INFO] from events.BoardEventProcessor in ForkJoinPool-1-worker-1 -  aggregateTags method ... 
+2017-05-03 18:15:41,664 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-18 -  buildHandler method ... 
+2017-05-03 18:15:47,765 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
+2017-05-03 18:22:05,616 [WARN] from application in board-impl-application-akka.actor.default-dispatcher-2 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-03 18:22:05,657 [ERROR] from board in board-impl-application-akka.actor.default-dispatcher-2 - Exception in RestCallId{method=GET, pathPattern='/api/boards'}
+java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.SyntaxError: line 0:-1 no viable alternative at input '<EOF>'
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.get(AbstractFuture.java:79) ~[guava-19.0.jar:na]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2$$anonfun$run$2.apply(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
 	at scala.util.Try$.apply(Try.scala:192) ~[scala-library-2.11.8.jar:1.0.1]
-	at scala.util.Success.map(Try.scala:237) ~[scala-library-2.11.8.jar:1.0.1]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237) ~[scala-library-2.11.8.jar:na]
-	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237) ~[scala-library-2.11.8.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.8.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.4.17.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.4.17.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.4.17.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.4.17.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.8.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.4.17.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) [akka-actor_2.11-2.4.17.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2.run(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_131]
+Caused by: com.datastax.driver.core.exceptions.SyntaxError: line 0:-1 no viable alternative at input '<EOF>'
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:132) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:224) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:200) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1442) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1433) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AbstractChainingFuture.run(Futures.java:1408) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$2$1.run(Futures.java:1177) ~[guava-19.0.jar:na]
+	... 3 common frames omitted
+2017-05-03 18:24:00,871 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-2 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-1/flow-5-1-unknown-operation#-1488685959]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-1/flow-5-1-unknown-operation#-1488685959]] terminated abruptly
+2017-05-03 18:24:01,760 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:24:01,763 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:24:01,821 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-16 -  aggregateTags method ... 
+2017-05-03 18:24:01,832 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:24:01,964 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
+2017-05-03 18:24:03,892 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-8 -  buildHandler method ... 
+2017-05-03 18:24:17,737 [WARN] from application in board-impl-application-akka.actor.default-dispatcher-8 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-03 18:24:17,746 [ERROR] from board in board-impl-application-akka.actor.default-dispatcher-7 - Exception in RestCallId{method=GET, pathPattern='/api/boards'}
+java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table board
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.get(AbstractFuture.java:79) ~[guava-19.0.jar:na]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2$$anonfun$run$2.apply(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) ~[scala-library-2.11.8.jar:1.0.1]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2.run(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_131]
+Caused by: com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table board
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:136) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:224) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:200) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1442) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1433) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AbstractChainingFuture.run(Futures.java:1408) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$2$1.run(Futures.java:1177) ~[guava-19.0.jar:na]
+	... 3 common frames omitted
+2017-05-03 18:25:13,690 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-9 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-4/flow-5-1-unknown-operation#-743812844]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-4/flow-5-1-unknown-operation#-743812844]] terminated abruptly
+2017-05-03 18:25:14,443 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:25:14,458 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:25:14,460 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:25:14,485 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-8 -  aggregateTags method ... 
+2017-05-03 18:25:14,595 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-4 -  buildHandler method ... 
+2017-05-03 18:25:16,517 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
+2017-05-03 18:25:42,494 [WARN] from application in board-impl-application-akka.actor.default-dispatcher-2 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-03 18:25:42,503 [ERROR] from board in board-impl-application-akka.actor.default-dispatcher-2 - Exception in RestCallId{method=GET, pathPattern='/api/boards'}
+java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table board
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.get(AbstractFuture.java:79) ~[guava-19.0.jar:na]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2$$anonfun$run$2.apply(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) ~[scala-library-2.11.8.jar:1.0.1]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2.run(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_131]
+Caused by: com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table board
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:136) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:224) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:200) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1442) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1433) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AbstractChainingFuture.run(Futures.java:1408) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$2$1.run(Futures.java:1177) ~[guava-19.0.jar:na]
+	... 3 common frames omitted
+2017-05-03 18:27:07,640 [WARN] from application in board-impl-application-akka.actor.default-dispatcher-16 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-03 18:27:07,657 [ERROR] from board in board-impl-application-akka.actor.default-dispatcher-4 - Exception in RestCallId{method=GET, pathPattern='/api/boards'}
+java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table board
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.get(AbstractFuture.java:79) ~[guava-19.0.jar:na]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2$$anonfun$run$2.apply(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) ~[scala-library-2.11.8.jar:1.0.1]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2.run(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_131]
+Caused by: com.datastax.driver.core.exceptions.InvalidQueryException: unconfigured table board
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:136) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:224) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:200) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1442) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1433) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AbstractChainingFuture.run(Futures.java:1408) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$2$1.run(Futures.java:1177) ~[guava-19.0.jar:na]
+	... 3 common frames omitted
+2017-05-03 18:28:09,663 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-6 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-7/flow-5-1-unknown-operation#1527908845]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-7/flow-5-1-unknown-operation#1527908845]] terminated abruptly
+2017-05-03 18:28:10,416 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:28:10,422 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:28:10,424 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:28:10,461 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  aggregateTags method ... 
+2017-05-03 18:28:10,536 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
+2017-05-03 18:28:12,497 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
+2017-05-03 18:28:21,516 [WARN] from application in board-impl-application-akka.actor.default-dispatcher-15 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-03 18:28:21,538 [ERROR] from board in board-impl-application-akka.actor.default-dispatcher-5 - Exception in RestCallId{method=GET, pathPattern='/api/boards'}
+java.lang.IllegalArgumentException: status is not a column defined in this metadata
+	at com.datastax.driver.core.ColumnDefinitions.getAllIdx(ColumnDefinitions.java:266) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.ColumnDefinitions.getFirstIdx(ColumnDefinitions.java:272) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.ArrayBackedRow.getIndexOf(ArrayBackedRow.java:81) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.AbstractGettableData.getString(AbstractGettableData.java:159) ~[cassandra-driver-core-3.1.0.jar:na]
+	at BoardServiceImpl.mapBoard(BoardServiceImpl.java:90) ~[classes/:na]
+	at akka.stream.javadsl.Source$$anonfun$map$1.apply(Source.scala:923) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.Map$$anon$8.onPush(Ops.scala:43) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:747) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:710) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:616) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:471) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreterShell.receive(ActorGraphInterpreter.scala:423) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:603) [akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:618) [akka-stream_2.11-2.4.17.jar:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:529) [akka-stream_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) [akka-actor_2.11-2.4.17.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
-Caused by: com.fasterxml.jackson.databind.JsonMappingException: Incompatible types: declared root type ([collection type; class org.pcollections.PSequence, contains [simple type, class com.kanban.Board]]) vs java.util.stream.ReferencePipeline$3
-	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:302) ~[jackson-databind-2.7.8.jar:2.7.8]
-	at com.fasterxml.jackson.databind.SerializerProvider._reportIncompatibleRootType(SerializerProvider.java:1115) ~[jackson-databind-2.7.8.jar:2.7.8]
-	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:225) ~[jackson-databind-2.7.8.jar:2.7.8]
-	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1425) ~[jackson-databind-2.7.8.jar:2.7.8]
-	at com.fasterxml.jackson.databind.ObjectWriter._configAndWriteValue(ObjectWriter.java:1129) ~[jackson-databind-2.7.8.jar:2.7.8]
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:967) ~[jackson-databind-2.7.8.jar:2.7.8]
-	at com.lightbend.lagom.javadsl.jackson.JacksonSerializerFactory$JacksonMessageSerializer$JacksonSerializer.serialize(JacksonSerializerFactory.java:107) ~[lagom-javadsl-jackson_2.11-1.3.2.jar:1.3.2]
-	... 24 common frames omitted
-2017-04-28 11:40:03,927 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-2 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-7/flow-5-1-unknown-operation#438740610]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-7/flow-5-1-unknown-operation#438740610]] terminated abruptly
-2017-04-28 11:40:04,234 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-4 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:04,237 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-4 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:04,242 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-4 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:04,284 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-5 -  aggregateTags method ... 
-2017-04-28 11:40:04,290 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-16 -  buildHandler method ... 
-2017-04-28 11:40:06,324 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-19 -  buildHandler method ... 
-2017-04-28 11:40:34,461 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-17 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-10/flow-5-1-unknown-operation#-1671514768]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-10/flow-5-1-unknown-operation#-1671514768]] terminated abruptly
-2017-04-28 11:40:34,859 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-3 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:34,860 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-3 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:34,861 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-3 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:34,874 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-19 -  aggregateTags method ... 
-2017-04-28 11:40:34,988 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-16 -  buildHandler method ... 
-2017-04-28 11:40:36,971 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-4 -  buildHandler method ... 
-2017-04-28 11:40:48,403 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-3 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-13/flow-5-1-unknown-operation#-3061241]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-13/flow-5-1-unknown-operation#-3061241]] terminated abruptly
-2017-04-28 11:40:48,680 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-17 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:48,680 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-17 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:48,681 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-17 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:40:48,693 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-4 -  aggregateTags method ... 
-2017-04-28 11:40:48,717 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
-2017-04-28 11:40:50,718 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-19 -  buildHandler method ... 
-2017-04-28 11:41:43,682 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-5 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-16/flow-5-1-unknown-operation#1858156031]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-16/flow-5-1-unknown-operation#1858156031]] terminated abruptly
-2017-04-28 11:41:43,914 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:41:43,914 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:41:43,916 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:41:43,944 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-15 -  aggregateTags method ... 
-2017-04-28 11:41:43,969 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
-2017-04-28 11:41:45,971 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-17 -  buildHandler method ... 
-2017-04-28 11:46:43,319 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-17 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-19/flow-5-1-unknown-operation#-1165299241]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-19/flow-5-1-unknown-operation#-1165299241]] terminated abruptly
-2017-04-28 11:46:43,543 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:46:43,543 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:46:43,547 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:46:43,568 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  aggregateTags method ... 
-2017-04-28 11:46:43,594 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-18 -  buildHandler method ... 
-2017-04-28 11:46:45,590 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
-2017-04-28 11:50:20,315 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-19 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-22/flow-5-1-unknown-operation#816020353]] terminated abruptly
-akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-22/flow-5-1-unknown-operation#816020353]] terminated abruptly
-2017-04-28 11:50:20,533 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:50:20,533 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:50:20,536 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-04-28 11:50:20,552 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-4 -  aggregateTags method ... 
-2017-04-28 11:50:20,555 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-17 -  buildHandler method ... 
-2017-04-28 11:50:22,572 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-2 -  buildHandler method ... 
-2017-04-28 14:12:09,818 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-3 - com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)
-java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)
-	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476) ~[guava-19.0.jar:na]
-	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435) ~[guava-19.0.jar:na]
-	at akka.persistence.cassandra.package$$anon$1$$anonfun$run$1.apply(package.scala:18) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) ~[scala-library-2.11.8.jar:1.0.1]
-	at akka.persistence.cassandra.package$$anon$1.run(package.scala:18) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[akka-actor_2.11-2.4.17.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_121]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_121]
-	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_121]
-Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)
-	at com.datastax.driver.core.RequestHandler.reportNoMoreHosts(RequestHandler.java:208) ~[cassandra-driver-core-3.1.0.jar:na]
-	at com.datastax.driver.core.RequestHandler.access$1000(RequestHandler.java:43) ~[cassandra-driver-core-3.1.0.jar:na]
-	at com.datastax.driver.core.RequestHandler$SpeculativeExecution.sendRequest(RequestHandler.java:274) ~[cassandra-driver-core-3.1.0.jar:na]
-	at com.datastax.driver.core.RequestHandler.startNewExecution(RequestHandler.java:112) ~[cassandra-driver-core-3.1.0.jar:na]
-	at com.datastax.driver.core.RequestHandler.sendRequest(RequestHandler.java:92) ~[cassandra-driver-core-3.1.0.jar:na]
-	at com.datastax.driver.core.SessionManager.executeAsync(SessionManager.java:136) ~[cassandra-driver-core-3.1.0.jar:na]
-	at akka.persistence.cassandra.query.EventsByTagFetcher.preStart(EventsByTagFetcher.scala:70) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
-	at akka.actor.Actor$class.aroundPreStart(Actor.scala:505) ~[akka-actor_2.11-2.4.17.jar:na]
-	at akka.persistence.cassandra.query.EventsByTagFetcher.aroundPreStart(EventsByTagFetcher.scala:43) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
-	at akka.actor.ActorCell.create(ActorCell.scala:590) ~[akka-actor_2.11-2.4.17.jar:na]
-	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:461) ~[akka-actor_2.11-2.4.17.jar:na]
-	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:483) ~[akka-actor_2.11-2.4.17.jar:na]
-	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:282) ~[akka-actor_2.11-2.4.17.jar:na]
-	at akka.dispatch.Mailbox.run(Mailbox.scala:223) ~[akka-actor_2.11-2.4.17.jar:na]
-	... 3 common frames omitted
+2017-05-03 18:29:02,062 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-15 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-10/flow-5-1-unknown-operation#1216118971]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-10/flow-5-1-unknown-operation#1216118971]] terminated abruptly
+2017-05-03 18:29:03,284 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-16 -  aggregateTags method ... 
+2017-05-03 18:29:03,213 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:29:03,364 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-2 -  buildHandler method ... 
+2017-05-03 18:29:03,392 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:29:03,474 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-15 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:29:05,374 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-17 -  buildHandler method ... 
+2017-05-03 18:29:11,355 [WARN] from application in board-impl-application-akka.actor.default-dispatcher-17 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-03 18:29:49,555 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-16 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-13/flow-5-1-unknown-operation#1490895254]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-13/flow-5-1-unknown-operation#1490895254]] terminated abruptly
+2017-05-03 18:29:50,054 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-16 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:29:50,056 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-16 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:29:50,058 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-16 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:29:50,095 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-18 -  aggregateTags method ... 
+2017-05-03 18:29:50,204 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-15 -  buildHandler method ... 
+2017-05-03 18:29:52,143 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
+2017-05-03 18:30:34,923 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-17 - Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-16/flow-5-1-unknown-operation#-1857356319]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://board-impl-application/user/StreamSupervisor-16/flow-5-1-unknown-operation#-1857356319]] terminated abruptly
+2017-05-03 18:30:35,472 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:30:35,475 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:30:35,481 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-03 18:30:35,503 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-15 -  aggregateTags method ... 
+2017-05-03 18:30:35,546 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-2 -  buildHandler method ... 

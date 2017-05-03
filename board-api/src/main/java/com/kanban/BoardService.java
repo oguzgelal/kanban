@@ -43,7 +43,7 @@ public interface BoardService extends Service {
      * @return
      */
     //ServiceCall<NotUsed, Source<Board, ?>> getBoards();
-    ServiceCall<NotUsed, PSequence<Board>> getBoards();
+    ServiceCall<NotUsed, Source<Board, ?>> getBoards();
 
     /**
      * @return

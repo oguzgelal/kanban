@@ -13,6 +13,10 @@ import akka.stream.javadsl.Source;
 import akka.stream.Materializer;
 import akka.stream.javadsl.Sink;
 
+import com.datastax.driver.core.BoundStatement;
+import com.datastax.driver.core.PreparedStatement;
+import com.datastax.driver.core.Row;
+
 import javax.inject.Inject;
 import java.util.Optional;
 import java.util.Arrays;
@@ -29,6 +33,8 @@ public class BoardServiceImpl implements BoardService {
     private final PersistentEntityRegistry persistentEntityRegistry;
     private final CassandraSession session;
     private final Materializer mat;
+    private static final String SELECT_NON_ARCHIVED_BOARDS =
+            "SELECT * FROM boards";
 
     /**
      * @param registry
@@ -64,17 +70,28 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public ServiceCall<NotUsed, PSequence<Board>> getBoards() {
-        return request -> {
-        CompletionStage str = session.selectAll("SELECT * FROM boards")
-        .thenApply(rows -> rows.stream().map(row -> Board.builder()
-                .id(row.getString("id"))
-                .name(row.getString("name"))
-                .state(row.getString("state"))
-                .build()));
-            return str;
+    public ServiceCall<NotUsed, Source<Board, ?>> getBoards() {
+        System.out.println("Finding the boards");
+        return req -> {
+            Source<Board, ?> result = fetchBoards();
+            return CompletableFuture.completedFuture(result);
         };
     }
+
+    private Source<Board, NotUsed> fetchBoards() {
+        
+        return session.select(SELECT_NON_ARCHIVED_BOARDS)
+                .map(this::mapBoard);
+    }
+    private Board mapBoard(Row row) {
+        System.out.println("Maping board");
+        return new Board(
+                row.getString("id"),
+                row.getString("name"),                
+                row.getString("state")
+        );
+    }
+
 
     /*
     @Override

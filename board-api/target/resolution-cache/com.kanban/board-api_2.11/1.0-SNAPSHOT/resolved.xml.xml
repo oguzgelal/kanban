@@ -4,7 +4,7 @@
 		module="board-api_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170427235422"
+		publication="20170503175603"
 	>
 		<description>
 		board-api
