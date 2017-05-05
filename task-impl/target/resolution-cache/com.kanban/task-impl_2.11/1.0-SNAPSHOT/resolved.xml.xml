@@ -4,7 +4,7 @@
 		module="task-impl_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170505201908"
+		publication="20170505221514"
 	>
 		<description>
 		task-impl
@@ -47,5 +47,6 @@
 		<dependency org="com.lightbend.lagom" name="lagom-javadsl-persistence-cassandra_2.11" rev="1.3.2" conf="compile->default(compile)"/>
 		<dependency org="com.lightbend.lagom" name="lagom-javadsl-testkit_2.11" rev="1.3.2" conf="test->default(compile)"/>
 		<dependency org="org.projectlombok" name="lombok" rev="1.16.10" conf="compile->default(compile)"/>
+		<dependency org="junit" name="junit" rev="4.11" conf="test->default(compile)"/>
 	</dependencies>
 </ivy-module>

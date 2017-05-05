@@ -12,7 +12,8 @@ lazy val `task-api` = (project in file("task-api"))
   .settings(
     libraryDependencies ++= Seq(
       lagomJavadslApi,
-      lombok
+      lombok,
+      "junit" % "junit" % "4.11" % Test
     )
   )
 
@@ -23,7 +24,8 @@ lazy val `task-impl` = (project in file("task-impl"))
     libraryDependencies ++= Seq(
       lagomJavadslPersistenceCassandra,
       lagomJavadslTestKit,
-      lombok
+      lombok,
+      "junit" % "junit" % "4.11" % Test
     )
   )
   .settings(lagomForkedTestSettings: _*)
@@ -34,7 +36,8 @@ lazy val `board-api` = (project in file("board-api"))
   .settings(
     libraryDependencies ++= Seq(
       lagomJavadslApi,
-      lombok
+      lombok,
+      "junit" % "junit" % "4.11" % Test
     )
   )
 
@@ -45,7 +48,8 @@ lazy val `board-impl` = (project in file("board-impl"))
     libraryDependencies ++= Seq(
       lagomJavadslPersistenceCassandra,
       lagomJavadslTestKit,
-      lombok
+      lombok,
+      "junit" % "junit" % "4.11" % Test
     )
   )
   .settings(lagomForkedTestSettings: _*)

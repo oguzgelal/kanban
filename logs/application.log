@@ -115,3 +115,7 @@ java.util.concurrent.RejectedExecutionException: event executor terminated
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_131]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_131]
 	at java.lang.Thread.run(Unknown Source) [na:1.8.0_131]
+2017-05-05 22:59:42,600 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170505225927786-akka.actor.default-dispatcher-2 - Processor actor [Actor[akka://ServiceTest_170505225927786/user/StreamSupervisor-0/flow-2-1-unknown-operation#-2046341762]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170505225927786/user/StreamSupervisor-0/flow-2-1-unknown-operation#-2046341762]] terminated abruptly
+2017-05-06 01:04:57,680 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506010445678-akka.actor.default-dispatcher-4 - Processor actor [Actor[akka://ServiceTest_170506010445678/user/StreamSupervisor-0/flow-3-1-unknown-operation#982294638]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506010445678/user/StreamSupervisor-0/flow-3-1-unknown-operation#982294638]] terminated abruptly

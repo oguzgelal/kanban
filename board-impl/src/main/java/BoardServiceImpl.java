@@ -33,8 +33,7 @@ public class BoardServiceImpl implements BoardService {
     private final PersistentEntityRegistry persistentEntityRegistry;
     private final CassandraSession session;
     private final Materializer mat;
-    private static final String SELECT_NON_ARCHIVED_BOARDS =
-            "SELECT * FROM boards WHERE STATE='CREATED' ALLOW FILTERING";
+    private static final String SELECT_NON_ARCHIVED_BOARDS = "SELECT * FROM boards WHERE STATE='CREATED' ALLOW FILTERING";
 
     /**
      * @param registry
@@ -79,33 +78,13 @@ public class BoardServiceImpl implements BoardService {
     }
 
     private Source<Board, NotUsed> fetchBoards() {
-        
-        return session.select(SELECT_NON_ARCHIVED_BOARDS)
-                .map(this::mapBoard);
+        return session.select(SELECT_NON_ARCHIVED_BOARDS).map(this::mapBoard);
     }
+
     private Board mapBoard(Row row) {
         System.out.println("Maping board");
-        return new Board(
-                row.getString("id"),
-                row.getString("name"),                
-                row.getString("state")
-        );
+        return new Board(row.getString("id"), row.getString("name"), row.getString("state"));
     }
-
-
-    /*
-    @Override
-    public ServiceCall<NotUsed, Source<Board, ?>> getBoards() {
-        return request -> CompletableFuture.completedFuture(session.select("SELECT * FROM boards")
-                .map(row -> new Board(row.getString("id"), row.getString("name"), row.getString("state"))));
-        
-        return request -> {
-        Source<Board, ?> x = session.select("SELECT * FROM boards")
-            .map(row -> new Board(row.getString("id"), row.getString("name"), row.getString("state")));
-        };
-        
-    }
-    */
 
     /**
      * @return
@@ -113,7 +92,7 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public ServiceCall<Board, Board> newBoard() {
         return board -> {
-            Board newBoard = new Board(Long.toString(System.currentTimeMillis()),board.getName(),"CREATED");
+            Board newBoard = new Board(Long.toString(System.currentTimeMillis()), board.getName(), "CREATED");
             PersistentEntityRef<BoardCommand> ref = boardEntityRef(newBoard);
             return ref.ask(BoardCommand.CreateBoard.builder().board(newBoard).build()).thenApply(result -> newBoard);
         };

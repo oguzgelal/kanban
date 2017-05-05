@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/kanban/}board-api...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/oguzgelal/Core/Oguz/web/LATEST/kanban/}board-api...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: com.kanban#board-api_2.11;1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -10,6 +10,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.8 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mno default cache defined: set to /Users/oguzgelal/.ivy2/cache[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.8[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.8 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.8] org.scala-lang#scala-library;2.11.8[0m
@@ -6316,6 +6317,36 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->org.projectlombok#lombok;1.16.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->org.projectlombok#lombok;1.16.10 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->org.projectlombok#lombok;1.16.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0minfo[0m] [0mResolving junit#junit;4.11 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: junit#junit;4.11 {test=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: junit#junit;4.11[0m
+[0m[[0mdebug[0m] [0m	found junit#junit;4.11 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0minfo[0m] [0mResolving org.hamcrest#hamcrest-core;1.3 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.hamcrest#hamcrest-core;1.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.hamcrest#hamcrest-core;1.3[0m
+[0m[[0mdebug[0m] [0m	found org.hamcrest#hamcrest-core;1.3 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for com.kanban#board-api_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
@@ -13362,6 +13393,38 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->org.projectlombok#lombok;1.16.10 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->org.projectlombok#lombok;1.16.10 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->org.projectlombok#lombok;1.16.10 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.11.8 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.11.8 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.11.8 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit;4.11->org.hamcrest#hamcrest-core;1.3 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.kanban#board-api_2.11;1.0-SNAPSHOT->junit#junit;4.11 [test->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for com.kanban#board-api_2.11;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for com.kanban#board-api_2.11;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
@@ -13603,22 +13666,24 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.google.code.findbugs#jsr305;3.0.1!jsr305.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.tomcat#tomcat-servlet-api;8.0.33!tomcat-servlet-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] javax.validation#validation-api;1.1.0.Final!validation-api.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit;4.11!junit.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.hamcrest#hamcrest-core;1.3!hamcrest-core.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.8!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1760ms :: artifacts dl 75ms[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT compile produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT runtime produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT test produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT provided produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT optional produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT compile-internal produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT runtime-internal produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT test-internal produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT plugin produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT sources produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT docs produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT pom produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT scala-tool produced in C:\kanban\board-api\target\resolution-cache\reports\com.kanban-board-api_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1760ms resolve - 75ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2027ms :: artifacts dl 33ms[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT compile produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT runtime produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT test produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT provided produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT optional produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT compile-internal produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT runtime-internal produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT test-internal produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT plugin produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT sources produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT docs produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT pom produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for com.kanban#board-api_2.11;1.0-SNAPSHOT scala-tool produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/board-api/target/resolution-cache/reports/com.kanban-board-api_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (2027ms resolve - 33ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
