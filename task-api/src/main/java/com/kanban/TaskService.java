@@ -27,11 +27,6 @@ public interface TaskService extends Service {
     ServiceCall<Task, Done> newTask();
 
     /**
-     * THIS SHOULD BE THE FINAL CREATE BOARD METHOD
-     */
-    ServiceCall<NotUsed, Task> createTask(String title);
-
-    /**
      * @param id
      * @return
      */
@@ -58,8 +53,7 @@ public interface TaskService extends Service {
 
         return named("task")
                 .withCalls(restCall(GET, "/api/task/:id", this::task),
-                        // restCall(POST, "/api/task", this::newTask),
-                        restCall(POST, "/api/task/:title", this::createTask),
+                        restCall(POST, "/api/task", this::newTask),
                         restCall(PUT, "/api/task/:id", this::updateTask),
                         restCall(DELETE, "/api/task/:id", this::deleteTask),
                         restCall(GET, "/api/tasks", this::getTasks))

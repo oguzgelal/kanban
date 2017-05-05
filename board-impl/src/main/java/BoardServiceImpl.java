@@ -120,21 +120,6 @@ public class BoardServiceImpl implements BoardService {
     }
 
     /**
-     * @return
-     */
-    @Override
-    public ServiceCall<NotUsed, Board> createBoard(String title) {
-        return request -> {
-            Board board = new Board(title);                        
-            PersistentEntityRef<BoardCommand> ref = boardEntityRef(board);
-            return ref.ask(BoardCommand.CreateBoard.builder().board(board).build()).thenApply(result ->board);
-            // .thenApply(result ->
-                        // new Board(result.id, result.name, result.state));
-            
-        };
-    }
-
-    /**
      * @param id
      * @return
      */

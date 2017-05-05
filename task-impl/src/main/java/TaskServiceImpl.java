@@ -87,8 +87,11 @@ public class TaskServiceImpl implements TaskService {
         System.out.println("Maping task");
         return new Task(
                 row.getString("id"),
-                row.getString("name"),                
-                row.getString("state")
+                row.getString("name"),
+                row.getString("details"),
+                row.getString("color"),
+                row.getString("boardId"),
+                row.getString("state")      
         );
     }
 
@@ -116,21 +119,6 @@ public class TaskServiceImpl implements TaskService {
             
             PersistentEntityRef<TaskCommand> ref = taskEntityRef(task);
             return ref.ask(TaskCommand.CreateTask.builder().task(task).build());
-        };
-    }
-
-    /**
-     * @return
-     */
-    @Override
-    public ServiceCall<NotUsed, Task> createTask(String title) {
-        return request -> {
-            Task task = new Task(title);                        
-            PersistentEntityRef<TaskCommand> ref = taskEntityRef(task);
-            return ref.ask(TaskCommand.CreateTask.builder().task(task).build()).thenApply(result ->task);
-            // .thenApply(result ->
-                        // new Task(result.id, result.name, result.state));
-            
         };
     }
 

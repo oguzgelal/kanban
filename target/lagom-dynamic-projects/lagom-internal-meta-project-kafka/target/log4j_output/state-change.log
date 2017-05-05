@@ -1,3 +1,4 @@
-[2017-05-03 17:55:34,588] TRACE Controller 0 epoch 7 received response {error_code=0} for a request sent to broker 192.168.0.171:9092 (id: 0 rack: null) (state.change.logger)
-[2017-05-05 13:50:48,916] TRACE Controller 0 epoch 9 received response {error_code=0} for a request sent to broker dhcp-161-251.vub.ac.be:9092 (id: 0 rack: null) (state.change.logger)
-[2017-05-05 13:54:50,827] TRACE Controller 0 epoch 10 received response {error_code=0} for a request sent to broker dhcp-161-251.vub.ac.be:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-05 14:00:50,493] TRACE Controller 0 epoch 11 received response {error_code=0} for a request sent to broker dhcp-161-251.vub.ac.be:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-05 14:03:49,015] TRACE Controller 0 epoch 12 received response {error_code=0} for a request sent to broker dhcp-161-251.vub.ac.be:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-05 14:06:22,513] TRACE Controller 0 epoch 13 received response {error_code=0} for a request sent to broker dhcp-161-251.vub.ac.be:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-05 14:10:43,938] TRACE Controller 0 epoch 14 received response {error_code=0} for a request sent to broker dhcp-161-251.vub.ac.be:9092 (id: 0 rack: null) (state.change.logger)

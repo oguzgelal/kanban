@@ -15,18 +15,17 @@ import javax.annotation.concurrent.Immutable;
 public final class Task {
     String id;
     String name;
+    String details;
+    String color;
+    String boardId;
     String state;
 
-    public Task(String id, String name, String state){
+    public Task(String id, String name, String details, String color, String boardId, String state) {
         this.id = id;
         this.name = name;
+        this.details = details;
+        this.color = color;
+        this.boardId = boardId;
         this.state = state;
-    }
-
-    public Task(String name){
-        //Create a random id (quite awful this but kassandra is a monster on its own and there's no time to learn it properly.')
-        this.id = Long.toString(System.currentTimeMillis());
-        this.name = name;
-        this.state = "CREATED";
     }
 }
