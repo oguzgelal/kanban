@@ -4,7 +4,7 @@
 		module="lagom-internal-meta-project-service-locator_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170505133146"
+		publication="20170505152336"
 	>
 		<description>
 		lagom-internal-meta-project-service-locator

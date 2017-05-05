@@ -3,6 +3,7 @@ import com.lightbend.lagom.javadsl.persistence.PersistentEntity;
 import commands.BoardCommand;
 import events.BoardEvent;
 import states.BoardStates;
+import com.kanban.Board;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -33,8 +34,31 @@ public class BoardEntity  extends PersistentEntity<BoardCommand, BoardEvent, Boa
         );
 
         behaviorBuilder.setCommandHandler(BoardCommand.UpdateBoard.class, (cmd, ctx) ->
-                ctx.thenPersist(BoardEvent.BoardUpdated.builder().board(cmd.getBoard()).entityId(entityId()).build()
-                        , evt -> ctx.reply(Done.getInstance()))
+                {
+
+                        Board currentBoard = state().getBoard().get();
+                        Board updatedBoard = cmd.getBoard();
+                        if(currentBoard!=null && updatedBoard!=null)                         
+                        {
+                                //make sure that they are not messing up with the id
+
+                                if(!updatedBoard.getState().equals("CREATED") && !updatedBoard.getState().equals("ARCHIVED"))
+                                {
+                                    //throw exception as the updated state is invalid  
+                                    ctx.commandFailed(UpdateFailureException.INVALID_STATE);
+                                }
+                                //in case the current board is in status archived, we don't allow any updates
+                                if(currentBoard.getState().equals("ARCHIVED"))
+                                {       
+                                        if(!currentBoard.getName().equals(updatedBoard.getName()))
+                                        {
+                                                ctx.commandFailed(UpdateFailureException.ARCHIVED_UPDATE);
+                                        }                                        
+                                }
+                        }
+                        
+                        return ctx.thenPersist(BoardEvent.BoardUpdated.builder().board(cmd.getBoard())
+                        .entityId(entityId()).build(), evt -> ctx.reply(Done.getInstance()));}
         );
 
         behaviorBuilder.setEventHandler(BoardEvent.BoardUpdated.class, evt ->
