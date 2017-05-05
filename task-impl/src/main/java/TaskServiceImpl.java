@@ -62,8 +62,14 @@ public class TaskServiceImpl implements TaskService {
             CompletionStage<Optional<Task>> taskFuture = session.selectAll("SELECT * FROM tasks WHERE id = ?", id)
                     .thenApply(
                             rows -> rows
-                                    .stream().map(row -> Task.builder().id(row.getString("id"))
-                                            .name(row.getString("name")).state(row.getString("state")).build())
+                                    .stream().map(row -> Task.builder()
+                                        .id(row.getString("id"))
+                                        .name(row.getString("name"))
+                                        .details(row.getString("details"))
+                                        .color(row.getString("color"))
+                                        .boardId(row.getString("boardId"))
+                                        .state(row.getString("state"))
+                                        .build())
                                     .findFirst());
             return taskFuture;
         };

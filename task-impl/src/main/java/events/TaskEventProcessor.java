@@ -18,7 +18,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletionStage;
 
-
 public class TaskEventProcessor extends ReadSideProcessor<TaskEvent> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TaskEventProcessor.class);
@@ -57,15 +56,12 @@ public class TaskEventProcessor extends ReadSideProcessor<TaskEvent> {
     @Override
     public ReadSideHandler<TaskEvent> buildHandler() {
         LOGGER.info(" buildHandler method ... ");
-        return readSide.<TaskEvent>builder("Tasks_offset")
-                .setGlobalPrepare(this::createTable)
-                .setPrepare(evtTag -> prepareWriteTask()
-                        .thenCombine(prepareDeleteTask(), (d1, d2) -> Done.getInstance())
-                )
+        return readSide.<TaskEvent>builder("Tasks_offset").setGlobalPrepare(this::createTable)
+                .setPrepare(
+                        evtTag -> prepareWriteTask().thenCombine(prepareDeleteTask(), (d1, d2) -> Done.getInstance()))
                 .setEventHandler(TaskCreated.class, this::processPostAdded)
                 .setEventHandler(TaskUpdated.class, this::processPostUpdated)
-                .setEventHandler(TaskDeleted.class, this::processPostDeleted)
-                .build();
+                .setEventHandler(TaskDeleted.class, this::processPostDeleted).build();
     }
 
     /**
@@ -75,9 +71,7 @@ public class TaskEventProcessor extends ReadSideProcessor<TaskEvent> {
     // Execute only once while application is start
     private CompletionStage<Done> createTable() {
         return session.executeCreateTable(
-                "CREATE TABLE IF NOT EXISTS Tasks ( " +
-                        "id TEXT, name TEXT, state TEXT, PRIMARY KEY(id))"
-        );
+                "CREATE TABLE IF NOT EXISTS Tasks ( " + "id TEXT, name TEXT, details TEXT, color TEXT, boardId TEXT, state TEXT, PRIMARY KEY(id))");
     }
 
     /*
@@ -90,12 +84,11 @@ public class TaskEventProcessor extends ReadSideProcessor<TaskEvent> {
      * @return
      */
     private CompletionStage<Done> prepareWriteTask() {
-        return session.prepare(
-                "INSERT INTO Tasks (id, name, state) VALUES (?, ?, ?)"
-        ).thenApply(ps -> {
-            setWriteTasks(ps);
-            return Done.getInstance();
-        });
+        return session.prepare("INSERT INTO Tasks (id, name, details, color, boardId, state) VALUES (?, ?, ?, ?, ?, ?)")
+                .thenApply(ps -> {
+                    setWriteTasks(ps);
+                    return Done.getInstance();
+                });
     }
 
     /**
@@ -117,6 +110,9 @@ public class TaskEventProcessor extends ReadSideProcessor<TaskEvent> {
         BoundStatement bindWriteTask = writeTasks.bind();
         bindWriteTask.setString("id", event.getTask().getId());
         bindWriteTask.setString("name", event.getTask().getName());
+        bindWriteTask.setString("details", event.getTask().getDetails());
+        bindWriteTask.setString("color", event.getTask().getColor());
+        bindWriteTask.setString("boardId", event.getTask().getBoardId());
         bindWriteTask.setString("state", event.getTask().getState());
         return CassandraReadSide.completedStatements(Arrays.asList(bindWriteTask));
     }
@@ -135,6 +131,9 @@ public class TaskEventProcessor extends ReadSideProcessor<TaskEvent> {
         BoundStatement bindWriteTask = writeTasks.bind();
         bindWriteTask.setString("id", event.getTask().getId());
         bindWriteTask.setString("name", event.getTask().getName());
+        bindWriteTask.setString("details", event.getTask().getDetails());
+        bindWriteTask.setString("color", event.getTask().getColor());
+        bindWriteTask.setString("boardId", event.getTask().getBoardId());
         bindWriteTask.setString("state", event.getTask().getState());
         return CassandraReadSide.completedStatements(Arrays.asList(bindWriteTask));
     }
@@ -149,9 +148,7 @@ public class TaskEventProcessor extends ReadSideProcessor<TaskEvent> {
      * @return
      */
     private CompletionStage<Done> prepareDeleteTask() {
-        return session.prepare(
-                "DELETE FROM Tasks WHERE id=?"
-        ).thenApply(ps -> {
+        return session.prepare("DELETE FROM Tasks WHERE id=?").thenApply(ps -> {
             setDeleteTasks(ps);
             return Done.getInstance();
         });
