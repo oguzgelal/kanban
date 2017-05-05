@@ -4,7 +4,7 @@
 		module="task-api_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170505200812"
+		publication="20170505201854"
 	>
 		<description>
 		task-api

@@ -34,7 +34,7 @@ public class TaskServiceImpl implements TaskService {
     private final CassandraSession session;
     private final Materializer mat;
     private static final String SELECT_NON_ARCHIVED_BOARDS =
-            "SELECT * FROM tasks ALLOW FILTERING";
+            "SELECT * FROM tasks";
 
     /**
      * @param registry
@@ -87,7 +87,8 @@ public class TaskServiceImpl implements TaskService {
     private Source<Task, NotUsed> fetchTasks() {
         
         return session.select(SELECT_NON_ARCHIVED_BOARDS)
-                .map(this::mapTask);
+                .map(this::mapTask).filter(p -> !p.getState().equals("DELETED"));
+                // .filter(p -> !p.getState().equals("DELETED"))
     }
     private Task mapTask(Row row) {
         System.out.println("Maping task");
