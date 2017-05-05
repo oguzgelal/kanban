@@ -34,7 +34,7 @@ public class TaskServiceImpl implements TaskService {
     private final CassandraSession session;
     private final Materializer mat;
     private static final String SELECT_NON_ARCHIVED_BOARDS =
-            "SELECT * FROM tasks";
+            "SELECT * FROM tasks ALLOW FILTERING";
 
     /**
      * @param registry
@@ -114,11 +114,11 @@ public class TaskServiceImpl implements TaskService {
      * @return
      */
     @Override
-    public ServiceCall<Task, Done> newTask() {
+    public ServiceCall<Task, Task> newTask() {
         return task -> {
-            
-            PersistentEntityRef<TaskCommand> ref = taskEntityRef(task);
-            return ref.ask(TaskCommand.CreateTask.builder().task(task).build());
+            Task newTask = new Task(Long.toString(System.currentTimeMillis()),task.getName(),task.getDetails(),task.getColor(),task.getBoardId(),"BACKLOG");
+            PersistentEntityRef<TaskCommand> ref = taskEntityRef(newTask);
+            return ref.ask(TaskCommand.CreateTask.builder().task(newTask).build()).thenApply(result -> newTask);
         };
     }
 

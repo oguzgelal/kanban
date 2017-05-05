@@ -24,7 +24,7 @@ public interface TaskService extends Service {
     /**
      * @return
      */
-    ServiceCall<Task, Done> newTask();
+    ServiceCall<Task, Task> newTask();
 
     /**
      * @param id

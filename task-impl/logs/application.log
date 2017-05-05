@@ -4,3 +4,101 @@
 2017-05-05 15:46:42,109 [INFO] from events.TaskEventProcessor in ForkJoinPool-1-worker-1 -  aggregateTags method ... 
 2017-05-05 15:46:44,218 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-2 -  buildHandler method ... 
 2017-05-05 15:46:48,289 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
+2017-05-05 18:29:25,980 [ERROR] from akka.actor.OneForOneStrategy in task-impl-application-akka.actor.default-dispatcher-350 - Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-1/flow-5-1-unknown-operation#1877866177]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-1/flow-5-1-unknown-operation#1877866177]] terminated abruptly
+2017-05-05 18:29:26,632 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-5 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:29:26,639 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-5 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:29:26,649 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in task-impl-application-akka.actor.default-dispatcher-5 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:29:26,683 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-19 -  aggregateTags method ... 
+2017-05-05 18:29:26,732 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-2 -  buildHandler method ... 
+2017-05-05 18:29:28,734 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-6 -  buildHandler method ... 
+2017-05-05 18:39:42,484 [ERROR] from akka.actor.OneForOneStrategy in task-impl-application-akka.actor.default-dispatcher-3 - Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-4/flow-5-1-unknown-operation#-1911449250]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-4/flow-5-1-unknown-operation#-1911449250]] terminated abruptly
+2017-05-05 18:39:42,956 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:39:43,002 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-6 -  aggregateTags method ... 
+2017-05-05 18:39:43,011 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:39:43,015 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in task-impl-application-akka.actor.default-dispatcher-6 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:39:43,023 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-18 -  buildHandler method ... 
+2017-05-05 18:39:45,039 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-2 -  buildHandler method ... 
+2017-05-05 18:41:51,285 [ERROR] from akka.actor.OneForOneStrategy in task-impl-application-akka.actor.default-dispatcher-4 - Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-7/flow-5-1-unknown-operation#1163533279]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-7/flow-5-1-unknown-operation#1163533279]] terminated abruptly
+2017-05-05 18:41:51,973 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-18 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:41:51,978 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-18 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:41:51,981 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in task-impl-application-akka.actor.default-dispatcher-18 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 18:41:52,011 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-6 -  aggregateTags method ... 
+2017-05-05 18:41:52,042 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
+2017-05-05 18:41:54,041 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-18 -  buildHandler method ... 
+2017-05-05 19:13:46,814 [ERROR] from akka.actor.OneForOneStrategy in task-impl-application-akka.actor.default-dispatcher-16 - Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-10/flow-5-1-unknown-operation#462563050]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-10/flow-5-1-unknown-operation#462563050]] terminated abruptly
+2017-05-05 19:13:47,345 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-18 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:13:47,351 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-18 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:13:47,362 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in task-impl-application-akka.actor.default-dispatcher-18 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:13:47,399 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-2 -  aggregateTags method ... 
+2017-05-05 19:13:47,449 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-16 -  buildHandler method ... 
+2017-05-05 19:13:49,437 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-18 -  buildHandler method ... 
+2017-05-05 19:27:37,638 [ERROR] from akka.actor.OneForOneStrategy in task-impl-application-akka.actor.default-dispatcher-3 - Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-13/flow-5-1-unknown-operation#-893523713]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-13/flow-5-1-unknown-operation#-893523713]] terminated abruptly
+2017-05-05 19:27:38,585 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-17 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:27:38,599 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-17 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:27:38,600 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in task-impl-application-akka.actor.default-dispatcher-17 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:27:38,665 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-2 -  aggregateTags method ... 
+2017-05-05 19:27:38,742 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
+2017-05-05 19:27:40,760 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
+2017-05-05 19:28:09,748 [WARN] from application in task-impl-application-akka.actor.default-dispatcher-3 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-05 19:28:09,784 [ERROR] from task in task-impl-application-akka.actor.default-dispatcher-3 - Exception in RestCallId{method=GET, pathPattern='/api/tasks'}
+java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.InvalidQueryException: Unsupported "!=" relation: state != 'DELETED'
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.get(AbstractFuture.java:79) ~[guava-19.0.jar:na]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2$$anonfun$run$2.apply(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) ~[scala-library-2.11.8.jar:1.0.1]
+	at akka.persistence.cassandra.package$ListenableFutureConverter$$anon$2.run(package.scala:25) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_131]
+Caused by: com.datastax.driver.core.exceptions.InvalidQueryException: Unsupported "!=" relation: state != 'DELETED'
+	at com.datastax.driver.core.Responses$Error.asException(Responses.java:136) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:224) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager$4.apply(SessionManager.java:200) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1442) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AsyncChainingFuture.doTransform(Futures.java:1433) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$AbstractChainingFuture.run(Futures.java:1408) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.Futures$2$1.run(Futures.java:1177) ~[guava-19.0.jar:na]
+	... 3 common frames omitted
+2017-05-05 19:30:39,104 [ERROR] from akka.actor.OneForOneStrategy in task-impl-application-akka.actor.default-dispatcher-2 - Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-16/flow-5-1-unknown-operation#-285655221]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://task-impl-application/user/StreamSupervisor-16/flow-5-1-unknown-operation#-285655221]] terminated abruptly
+2017-05-05 19:30:39,622 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-8 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:30:39,642 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in task-impl-application-akka.actor.default-dispatcher-8 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:30:39,644 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in task-impl-application-akka.actor.default-dispatcher-8 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [task_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 19:30:39,691 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-5 -  aggregateTags method ... 
+2017-05-05 19:30:39,732 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-4 -  buildHandler method ... 
+2017-05-05 19:30:41,738 [INFO] from events.TaskEventProcessor in task-impl-application-akka.actor.default-dispatcher-7 -  buildHandler method ... 
+2017-05-05 19:30:48,178 [WARN] from application in task-impl-application-akka.actor.default-dispatcher-6 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-05 19:30:48,194 [ERROR] from task in task-impl-application-akka.actor.default-dispatcher-6 - Exception in RestCallId{method=GET, pathPattern='/api/tasks'}
+java.lang.IllegalArgumentException: details is not a column defined in this metadata
+	at com.datastax.driver.core.ColumnDefinitions.getAllIdx(ColumnDefinitions.java:266) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.ColumnDefinitions.getFirstIdx(ColumnDefinitions.java:272) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.ArrayBackedRow.getIndexOf(ArrayBackedRow.java:81) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.AbstractGettableData.getString(AbstractGettableData.java:159) ~[cassandra-driver-core-3.1.0.jar:na]
+	at TaskServiceImpl.mapTask(TaskServiceImpl.java:91) ~[classes/:na]
+	at akka.stream.javadsl.Source$$anonfun$map$1.apply(Source.scala:923) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.Map$$anon$8.onPush(Ops.scala:43) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:747) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:710) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:616) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:471) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.GraphInterpreterShell.receive(ActorGraphInterpreter.scala:423) ~[akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:603) [akka-stream_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:618) [akka-stream_2.11-2.4.17.jar:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:529) [akka-stream_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) [akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]

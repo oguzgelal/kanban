@@ -24,7 +24,7 @@ public interface BoardService extends Service {
     /**
      * @return
      */
-    ServiceCall<Board, Done> newBoard();
+    ServiceCall<Board, Board> newBoard();
 
     /**
      * @param id

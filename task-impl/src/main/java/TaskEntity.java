@@ -3,6 +3,7 @@ import com.lightbend.lagom.javadsl.persistence.PersistentEntity;
 import commands.TaskCommand;
 import events.TaskEvent;
 import states.TaskStates;
+import com.kanban.Task;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
@@ -33,8 +34,27 @@ public class TaskEntity  extends PersistentEntity<TaskCommand, TaskEvent, TaskSt
         );
 
         behaviorBuilder.setCommandHandler(TaskCommand.UpdateTask.class, (cmd, ctx) ->
-                ctx.thenPersist(TaskEvent.TaskUpdated.builder().task(cmd.getTask()).entityId(entityId()).build()
-                        , evt -> ctx.reply(Done.getInstance()))
+        {
+                        Task currentTask = state().getTask().get();
+                        Task updatedTask = cmd.getTask();
+                        if(currentTask!=null && updatedTask!=null)                         
+                        {
+                                if(!updatedTask.getState().equals("BACKLOG") && !updatedTask.getState().equals("SCHEDULED")
+                                &&!updatedTask.getState().equals("STARTED")&& !updatedTask.getState().equals("COMPLETED")
+                                && !updatedTask.getState().equals("DELETED")&& !updatedTask.getState().equals("ARCHIVED"))
+                                {
+                                    //throw exception as the updated state is invalid  
+                                    ctx.commandFailed(UpdateFailureException.INVALID_TASK_STATE);
+                                }
+                                if(updatedTask.getState().equals("ARCHIVED") && !currentTask.getState().equals("COMPLETED"))
+                                {
+                                     ctx.commandFailed(UpdateFailureException.INVALID_TASK_STATE);   
+                                }
+                                
+                        }
+                return ctx.thenPersist(TaskEvent.TaskUpdated.builder().task(cmd.getTask()).entityId(entityId()).build()
+                        , evt -> ctx.reply(Done.getInstance()));
+        }
         );
 
         behaviorBuilder.setEventHandler(TaskEvent.TaskUpdated.class, evt ->

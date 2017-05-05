@@ -34,7 +34,7 @@ public class BoardServiceImpl implements BoardService {
     private final CassandraSession session;
     private final Materializer mat;
     private static final String SELECT_NON_ARCHIVED_BOARDS =
-            "SELECT * FROM boards";
+            "SELECT * FROM boards WHERE STATE='CREATED' ALLOW FILTERING";
 
     /**
      * @param registry
@@ -111,11 +111,11 @@ public class BoardServiceImpl implements BoardService {
      * @return
      */
     @Override
-    public ServiceCall<Board, Done> newBoard() {
+    public ServiceCall<Board, Board> newBoard() {
         return board -> {
-            
-            PersistentEntityRef<BoardCommand> ref = boardEntityRef(board);
-            return ref.ask(BoardCommand.CreateBoard.builder().board(board).build());
+            Board newBoard = new Board(Long.toString(System.currentTimeMillis()),board.getName(),"CREATED");
+            PersistentEntityRef<BoardCommand> ref = boardEntityRef(newBoard);
+            return ref.ask(BoardCommand.CreateBoard.builder().board(newBoard).build()).thenApply(result -> newBoard);
         };
     }
 
