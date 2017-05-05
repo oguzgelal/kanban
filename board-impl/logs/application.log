@@ -1,7 +1,33 @@
-2017-05-03 19:53:31,144 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-05-03 19:53:31,162 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-6 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-05-03 19:53:32,306 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-7 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
-2017-05-03 19:53:32,604 [INFO] from events.BoardEventProcessor in ForkJoinPool-1-worker-2 -  aggregateTags method ... 
-2017-05-03 19:53:32,678 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
-2017-05-03 19:53:36,764 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-5 -  buildHandler method ... 
-2017-05-03 19:54:50,076 [WARN] from application in board-impl-application-akka.actor.default-dispatcher-6 - Response header contains a custom status code and/or custom protocol and/or custom headers, but this was invoked by a transport (eg WebSockets) that does not allow sending custom headers. This response header will be ignored: ResponseHeader{status=200, protocol=MessageProtocol{contentType=Optional.empty, charset=Optional.empty, version=Optional.empty}, headers={}}
+2017-05-05 13:55:02,091 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [cassandra-journal.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 13:55:02,097 [WARN] from com.lightbend.lagom.internal.javadsl.persistence.cassandra.CassandraPersistentEntityRegistry in board-impl-application-akka.actor.default-dispatcher-2 - Configuration for [cassandra-snapshot-store.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 13:55:02,893 [WARN] from com.lightbend.lagom.javadsl.persistence.cassandra.CassandraSession in board-impl-application-akka.actor.default-dispatcher-3 - Configuration for [lagom.persistence.read-side.cassandra.keyspace] uses deprecated default value [board_impl]. Please set an explicit keyspace value in application.conf if you haven't already. The default will be removed in a future version of Lagom.
+2017-05-05 13:55:03,154 [INFO] from events.BoardEventProcessor in ForkJoinPool-2-worker-1 -  aggregateTags method ... 
+2017-05-05 13:55:03,674 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-14 -  buildHandler method ... 
+2017-05-05 13:55:07,241 [INFO] from events.BoardEventProcessor in board-impl-application-akka.actor.default-dispatcher-3 -  buildHandler method ... 
+2017-05-05 13:55:31,452 [ERROR] from akka.actor.OneForOneStrategy in board-impl-application-akka.actor.default-dispatcher-15 - com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)
+java.util.concurrent.ExecutionException: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:476) ~[guava-19.0.jar:na]
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:435) ~[guava-19.0.jar:na]
+	at akka.persistence.cassandra.package$$anon$1$$anonfun$run$1.apply(package.scala:18) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) ~[scala-library-2.11.8.jar:1.0.1]
+	at akka.persistence.cassandra.package$$anon$1.run(package.scala:18) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
+Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (no host was tried)
+	at com.datastax.driver.core.RequestHandler.reportNoMoreHosts(RequestHandler.java:208) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.RequestHandler.access$1000(RequestHandler.java:43) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.RequestHandler$SpeculativeExecution.sendRequest(RequestHandler.java:274) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.RequestHandler.startNewExecution(RequestHandler.java:112) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.RequestHandler.sendRequest(RequestHandler.java:92) ~[cassandra-driver-core-3.1.0.jar:na]
+	at com.datastax.driver.core.SessionManager.executeAsync(SessionManager.java:136) ~[cassandra-driver-core-3.1.0.jar:na]
+	at akka.persistence.cassandra.query.EventsByTagFetcher.preStart(EventsByTagFetcher.scala:70) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.actor.Actor$class.aroundPreStart(Actor.scala:505) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.persistence.cassandra.query.EventsByTagFetcher.aroundPreStart(EventsByTagFetcher.scala:43) ~[akka-persistence-cassandra_2.11-0.22.jar:na]
+	at akka.actor.ActorCell.create(ActorCell.scala:590) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invokeAll$1(ActorCell.scala:461) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.systemInvoke(ActorCell.scala:483) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:282) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:223) ~[akka-actor_2.11-2.4.17.jar:na]
+	... 3 common frames omitted
