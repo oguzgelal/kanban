@@ -16,10 +16,18 @@
 [0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/src/test/java/com/kanban/TaskServiceTest.java)[0m
 [0m[[0mdebug[0m] [0m[naha] Recompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
 [0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/target/scala-2.11/test-classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@f4b2616 directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 1.03135691 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.104538152 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 1.146388695 s[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@59762cb0 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.038757377 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.112566288 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 1.15891052 s[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/src/test/java/com/kanban/TaskServiceTest.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/src/test/java/com/kanban/TaskServiceTest.java...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/src/test/java/com/kanban/TaskServiceTest.java)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(/Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/src/test/java/com/kanban/TaskServiceTest.java)[0m
+[0m[[0mdebug[0m] [0m[naha] The /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/src/test/java/com/kanban/TaskServiceTest.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	archievedTasksShouldNotUpdate, completedTasksShouldNotUpdate.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] Name hashing optimization doesn't apply to non-Scala dependency: /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/task-impl/src/test/java/com/kanban/TaskServiceTest.java[0m
 [0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
 [0m[[0mdebug[0m] [0m[naha] 	Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m
