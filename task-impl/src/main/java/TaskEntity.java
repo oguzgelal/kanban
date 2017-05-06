@@ -4,16 +4,13 @@ import commands.TaskCommand;
 import events.TaskEvent;
 import states.TaskStates;
 import com.kanban.Task;
+import java.util.concurrent.CompletionStage;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
 public class TaskEntity extends PersistentEntity<TaskCommand, TaskEvent, TaskStates> {
-        /**
-         *
-         * @param snapshotState
-         * @return
-         */
+
         @Override
         public Behavior initialBehavior(Optional<TaskStates> snapshotState) {
 

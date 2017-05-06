@@ -4,7 +4,7 @@
 		module="board-impl_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170505221518"
+		publication="20170506145635"
 	>
 		<description>
 		board-impl

@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170505215903"/>
+		date="20170506145633"/>
 	<dependencies>
 		<module organisation="org.projectlombok" name="lombok">
 			<revision name="1.16.10" status="release" pubdate="20160715024049" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://projectlombok.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="60">
@@ -857,12 +857,12 @@
 			</revision>
 		</module>
 		<module organisation="junit" name="junit">
-			<revision name="4.11" status="release" pubdate="20121114202147" resolver="public" artresolver="public" homepage="http://junit.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="61">
+			<revision name="4.11" status="release" pubdate="20121114202147" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="61">
 				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
-				<metadata-artifact status="successful" details="" size="2344" time="229" location="/Users/oguzgelal/.ivy2/cache/junit/junit/ivy-4.11.xml" searched="true" original-local-location="/Users/oguzgelal/.ivy2/cache/junit/junit/ivy-4.11.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.pom"/>
+				<metadata-artifact status="no" details="" size="2897" time="0" location="/Users/oguzgelal/.ivy2/cache/junit/junit/ivy-4.11.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.pom"/>
 				<caller organisation="com.kanban" name="task-api_2.11" conf="test, compile, runtime" rev="4.11" rev-constraint-default="4.11" rev-constraint-dynamic="4.11" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="junit" type="jar" ext="jar" status="successful" details="" size="245039" time="456" location="/Users/oguzgelal/.ivy2/cache/junit/junit/jars/junit-4.11.jar">
+					<artifact name="junit" type="jar" ext="jar" status="no" details="" size="245039" time="0" location="/Users/oguzgelal/.ivy2/cache/junit/junit/jars/junit-4.11.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.jar"/>
 					</artifact>
 				</artifacts>

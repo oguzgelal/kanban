@@ -13398,7 +13398,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2876ms :: artifacts dl 42ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3033ms :: artifacts dl 82ms[0m
 [0m[[0mdebug[0m] [0m	report for com.kanban#lagom-internal-meta-project-cassandra_2.11;1.0-SNAPSHOT compile produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/target/lagom-dynamic-projects/lagom-internal-meta-project-cassandra/target/resolution-cache/reports/com.kanban-lagom-internal-meta-project-cassandra_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.kanban#lagom-internal-meta-project-cassandra_2.11;1.0-SNAPSHOT runtime produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/target/lagom-dynamic-projects/lagom-internal-meta-project-cassandra/target/resolution-cache/reports/com.kanban-lagom-internal-meta-project-cassandra_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.kanban#lagom-internal-meta-project-cassandra_2.11;1.0-SNAPSHOT test produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/target/lagom-dynamic-projects/lagom-internal-meta-project-cassandra/target/resolution-cache/reports/com.kanban-lagom-internal-meta-project-cassandra_2.11-test.xml[0m
@@ -13412,5 +13412,5 @@
 [0m[[0mdebug[0m] [0m	report for com.kanban#lagom-internal-meta-project-cassandra_2.11;1.0-SNAPSHOT docs produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/target/lagom-dynamic-projects/lagom-internal-meta-project-cassandra/target/resolution-cache/reports/com.kanban-lagom-internal-meta-project-cassandra_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.kanban#lagom-internal-meta-project-cassandra_2.11;1.0-SNAPSHOT pom produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/target/lagom-dynamic-projects/lagom-internal-meta-project-cassandra/target/resolution-cache/reports/com.kanban-lagom-internal-meta-project-cassandra_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for com.kanban#lagom-internal-meta-project-cassandra_2.11;1.0-SNAPSHOT scala-tool produced in /Users/oguzgelal/Core/Oguz/web/LATEST/kanban/target/lagom-dynamic-projects/lagom-internal-meta-project-cassandra/target/resolution-cache/reports/com.kanban-lagom-internal-meta-project-cassandra_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2876ms resolve - 42ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (3033ms resolve - 82ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

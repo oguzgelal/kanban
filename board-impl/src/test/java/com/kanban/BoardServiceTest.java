@@ -16,7 +16,7 @@ public class BoardServiceTest {
         withServer(defaultSetup().withCassandra(true), server -> {
             BoardService service = server.client(BoardService.class);
 
-            Optional<Board> boardCreated = service.board("IdDoesNotExist").invoke().toCompletableFuture().get(5, SECONDS);
+            Optional<Board> boardCreated = service.board("NonExistingId").invoke().toCompletableFuture().get(5, SECONDS);
             assertEquals(boardCreated, Optional.empty());
         });
     }

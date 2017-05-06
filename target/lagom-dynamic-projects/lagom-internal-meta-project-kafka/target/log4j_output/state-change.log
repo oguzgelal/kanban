@@ -1,2 +1,4 @@
-[2017-05-06 01:01:54,383] TRACE Controller 0 epoch 6 received response {error_code=0} for a request sent to broker localhost:9092 (id: 0 rack: null) (state.change.logger)
-[2017-05-06 01:07:11,180] TRACE Controller 0 epoch 7 received response {error_code=0} for a request sent to broker localhost:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-06 15:20:12,172] TRACE Controller 0 epoch 2 received response {error_code=0} for a request sent to broker localhost:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-06 15:25:29,346] TRACE Controller 0 epoch 3 received response {error_code=0} for a request sent to broker localhost:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-06 15:31:58,737] TRACE Controller 0 epoch 4 received response {error_code=0} for a request sent to broker localhost:9092 (id: 0 rack: null) (state.change.logger)
+[2017-05-06 15:34:55,190] TRACE Controller 0 epoch 5 received response {error_code=0} for a request sent to broker localhost:9092 (id: 0 rack: null) (state.change.logger)

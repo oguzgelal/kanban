@@ -119,3 +119,125 @@ java.util.concurrent.RejectedExecutionException: event executor terminated
 akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170505225927786/user/StreamSupervisor-0/flow-2-1-unknown-operation#-2046341762]] terminated abruptly
 2017-05-06 01:04:57,680 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506010445678-akka.actor.default-dispatcher-4 - Processor actor [Actor[akka://ServiceTest_170506010445678/user/StreamSupervisor-0/flow-3-1-unknown-operation#982294638]] terminated abruptly
 akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506010445678/user/StreamSupervisor-0/flow-3-1-unknown-operation#982294638]] terminated abruptly
+2017-05-06 14:45:34,541 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506144516710-akka.actor.default-dispatcher-3 - Recipient[Actor[akka://ServiceTest_170506144516710/user/readSideGlobalPrepare-TaskEventProcessor-singletonProxy#-2034598221]] had already been terminated. Sender[null] sent the message of type "com.lightbend.lagom.internal.persistence.cluster.ClusterStartupTaskActor$Execute$".
+akka.pattern.AskTimeoutException: Recipient[Actor[akka://ServiceTest_170506144516710/user/readSideGlobalPrepare-TaskEventProcessor-singletonProxy#-2034598221]] had already been terminated. Sender[null] sent the message of type "com.lightbend.lagom.internal.persistence.cluster.ClusterStartupTaskActor$Execute$".
+	at akka.pattern.AskableActorRef$.internalAsk$extension(AskSupport.scala:289) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.pattern.AskableActorRef$.$qmark$extension1(AskSupport.scala:281) ~[akka-actor_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.persistence.cluster.ClusterStartupTask.askExecute(ClusterStartupTask.scala:84) ~[lagom-persistence-core_2.11-1.3.2.jar:1.3.2]
+	at com.lightbend.lagom.internal.javadsl.persistence.ReadSideActor$$anonfun$receive$1.applyOrElse(ReadSideActor.scala:65) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) ~[akka-actor_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.ReadSideActor.aroundReceive(ReadSideActor.scala:40) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) [akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
+2017-05-06 14:48:19,475 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506144801386-akka.actor.default-dispatcher-15 - Processor actor [Actor[akka://ServiceTest_170506144801386/user/StreamSupervisor-0/flow-3-1-unknown-operation#-1756355266]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506144801386/user/StreamSupervisor-0/flow-3-1-unknown-operation#-1756355266]] terminated abruptly
+2017-05-06 14:51:43,764 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506145122924-akka.actor.default-dispatcher-19 - Processor actor [Actor[akka://ServiceTest_170506145122924/user/StreamSupervisor-0/flow-2-1-unknown-operation#473889142]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506145122924/user/StreamSupervisor-0/flow-2-1-unknown-operation#473889142]] terminated abruptly
+2017-05-06 14:57:54,378 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506145737948-akka.actor.default-dispatcher-4 - Processor actor [Actor[akka://ServiceTest_170506145737948/user/StreamSupervisor-0/flow-3-1-unknown-operation#269937007]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506145737948/user/StreamSupervisor-0/flow-3-1-unknown-operation#269937007]] terminated abruptly
+2017-05-06 15:04:07,750 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506150353058-akka.actor.default-dispatcher-18 - Processor actor [Actor[akka://ServiceTest_170506150353058/user/StreamSupervisor-0/flow-3-1-unknown-operation#1430636321]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506150353058/user/StreamSupervisor-0/flow-3-1-unknown-operation#1430636321]] terminated abruptly
+2017-05-06 15:14:14,850 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506151402398-akka.actor.default-dispatcher-15 - null
+java.lang.NullPointerException: null
+	at com.lightbend.lagom.internal.javadsl.persistence.AbstractPersistentEntityRegistry$$anonfun$2.apply(AbstractPersistentEntityRegistry.scala:66) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at com.lightbend.lagom.internal.javadsl.persistence.AbstractPersistentEntityRegistry$$anonfun$2.apply(AbstractPersistentEntityRegistry.scala:64) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.cluster.sharding.ShardRegion.deliverMessage(ShardRegion.scala:696) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.cluster.sharding.ShardRegion$$anonfun$receive$2.applyOrElse(ShardRegion.scala:417) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.cluster.sharding.ShardRegion.aroundReceive(ShardRegion.scala:339) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) [akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
+2017-05-06 15:14:19,856 [ERROR] from task in ServiceTest_170506151402398-akka.actor.default-dispatcher-16 - Exception in RestCallId{method=PUT, pathPattern='/api/task/:id'}
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://ServiceTest_170506151402398/system/sharding/TaskEntity#-1599329260]] after [5000 ms]. Sender[null] sent message of type "com.lightbend.lagom.javadsl.persistence.CommandEnvelope".
+	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:604) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126) ~[akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601) ~[scala-library-2.11.8.jar:na]
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:109) ~[scala-library-2.11.8.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599) ~[scala-library-2.11.8.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
+2017-05-06 15:14:19,957 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506151402398-akka.actor.default-dispatcher-4 - Processor actor [Actor[akka://ServiceTest_170506151402398/user/StreamSupervisor-0/flow-3-1-unknown-operation#-605555777]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506151402398/user/StreamSupervisor-0/flow-3-1-unknown-operation#-605555777]] terminated abruptly
+2017-05-06 15:15:47,489 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506151531958-akka.actor.default-dispatcher-14 - null
+java.lang.NullPointerException: null
+	at com.lightbend.lagom.internal.javadsl.persistence.AbstractPersistentEntityRegistry$$anonfun$2.apply(AbstractPersistentEntityRegistry.scala:66) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at com.lightbend.lagom.internal.javadsl.persistence.AbstractPersistentEntityRegistry$$anonfun$2.apply(AbstractPersistentEntityRegistry.scala:64) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.cluster.sharding.ShardRegion.deliverMessage(ShardRegion.scala:696) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.cluster.sharding.ShardRegion$$anonfun$receive$2.applyOrElse(ShardRegion.scala:417) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.cluster.sharding.ShardRegion.aroundReceive(ShardRegion.scala:339) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) [akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
+2017-05-06 15:15:52,496 [ERROR] from task in ServiceTest_170506151531958-akka.actor.default-dispatcher-20 - Exception in RestCallId{method=PUT, pathPattern='/api/task/:id'}
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://ServiceTest_170506151531958/system/sharding/TaskEntity#-274618504]] after [5000 ms]. Sender[null] sent message of type "com.lightbend.lagom.javadsl.persistence.CommandEnvelope".
+	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:604) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126) ~[akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601) ~[scala-library-2.11.8.jar:na]
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:109) ~[scala-library-2.11.8.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599) ~[scala-library-2.11.8.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
+2017-05-06 15:15:52,666 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506151531958-akka.actor.default-dispatcher-20 - Processor actor [Actor[akka://ServiceTest_170506151531958/user/StreamSupervisor-0/flow-3-1-unknown-operation#445866243]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506151531958/user/StreamSupervisor-0/flow-3-1-unknown-operation#445866243]] terminated abruptly
+2017-05-06 15:18:05,476 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506151748480-akka.actor.default-dispatcher-15 - null
+java.lang.NullPointerException: null
+	at com.lightbend.lagom.internal.javadsl.persistence.AbstractPersistentEntityRegistry$$anonfun$2.apply(AbstractPersistentEntityRegistry.scala:66) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at com.lightbend.lagom.internal.javadsl.persistence.AbstractPersistentEntityRegistry$$anonfun$2.apply(AbstractPersistentEntityRegistry.scala:64) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.cluster.sharding.ShardRegion.deliverMessage(ShardRegion.scala:696) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.cluster.sharding.ShardRegion$$anonfun$receive$2.applyOrElse(ShardRegion.scala:417) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.cluster.sharding.ShardRegion.aroundReceive(ShardRegion.scala:339) ~[akka-cluster-sharding_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) [akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) [akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
+2017-05-06 15:18:10,487 [ERROR] from task in ServiceTest_170506151748480-akka.actor.default-dispatcher-20 - Exception in RestCallId{method=PUT, pathPattern='/api/task/:id'}
+akka.pattern.AskTimeoutException: Ask timed out on [Actor[akka://ServiceTest_170506151748480/system/sharding/TaskEntity#-1103399033]] after [5000 ms]. Sender[null] sent message of type "com.lightbend.lagom.javadsl.persistence.CommandEnvelope".
+	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:604) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.Scheduler$$anon$4.run(Scheduler.scala:126) ~[akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601) ~[scala-library-2.11.8.jar:na]
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:109) ~[scala-library-2.11.8.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599) ~[scala-library-2.11.8.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(LightArrayRevolverScheduler.scala:329) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.executeBucket$1(LightArrayRevolverScheduler.scala:280) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:284) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:236) ~[akka-actor_2.11-2.4.17.jar:na]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
+2017-05-06 15:18:10,645 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506151748480-akka.actor.default-dispatcher-16 - Processor actor [Actor[akka://ServiceTest_170506151748480/user/StreamSupervisor-0/flow-3-1-unknown-operation#1648516031]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506151748480/user/StreamSupervisor-0/flow-3-1-unknown-operation#1648516031]] terminated abruptly
+2017-05-06 15:34:18,308 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506153402661-akka.actor.default-dispatcher-14 - Processor actor [Actor[akka://ServiceTest_170506153402661/user/StreamSupervisor-0/flow-3-1-unknown-operation#305985297]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506153402661/user/StreamSupervisor-0/flow-3-1-unknown-operation#305985297]] terminated abruptly
+2017-05-06 15:40:08,197 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506153948462-akka.actor.default-dispatcher-20 - Processor actor [Actor[akka://ServiceTest_170506153948462/user/StreamSupervisor-0/flow-3-1-unknown-operation#428877708]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506153948462/user/StreamSupervisor-0/flow-3-1-unknown-operation#428877708]] terminated abruptly
