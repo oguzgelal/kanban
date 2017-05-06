@@ -1,0 +1,26 @@
+[0m[[0mdebug[0m] [0mjavaOptions: List(-Xms256M, -Xmx512M)[0m
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(com.kanban.BoardServiceTest, sbt.ForkMain$AnnotatedFingerscan@383d6d61, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36minvalidStateShouldFailOnUpdate[0m started[0m
+[0m[[0mdebug[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36minvalidStateShouldFailOnUpdate[0m finished, took 0.893 sec[0m
+[0m[[0minfo[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldInsertBoardCorrectly[0m started[0m
+[0m[[0mdebug[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldInsertBoardCorrectly[0m finished, took 0.035 sec[0m
+[0m[[0minfo[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36minvalidStateShouldDefaultToCreatedOnInsert[0m started[0m
+[0m[[0mdebug[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36minvalidStateShouldDefaultToCreatedOnInsert[0m finished, took 0.026 sec[0m
+[0m[[0minfo[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldUpdateBoardCorrectly[0m started[0m
+[0m[[0mdebug[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldUpdateBoardCorrectly[0m finished, took 5.082 sec[0m
+[0m[[0minfo[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36marchievedBoardsShouldNotUpdate[0m started[0m
+[0m[[0mdebug[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36marchievedBoardsShouldNotUpdate[0m finished, took 5.037 sec[0m
+[0m[[0minfo[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldDeleteBoard[0m started[0m
+[0m[[0mdebug[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldDeleteBoard[0m finished, took 10.058 sec[0m
+[0m[[0minfo[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldNotFetchNonExistingBoard[0m started[0m
+[0m[[0mdebug[0m] [0mTest com.kanban.[33mBoardServiceTest[0m.[36mshouldNotFetchNonExistingBoard[0m finished, took 0.01 sec[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 7 total, 33.912s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 7 events.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[0minfo[0m] [0mPassed: Total 7, Failed 0, Errors 0, Passed 7[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	com.kanban.BoardServiceTest[0m

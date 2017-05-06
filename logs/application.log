@@ -369,3 +369,70 @@ UpdateFailureException: Invalid state submited for the task.
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
 2017-05-06 16:02:42,799 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506160207793-akka.actor.default-dispatcher-20 - Processor actor [Actor[akka://ServiceTest_170506160207793/user/StreamSupervisor-0/flow-3-1-unknown-operation#-984648247]] terminated abruptly
 akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506160207793/user/StreamSupervisor-0/flow-3-1-unknown-operation#-984648247]] terminated abruptly
+2017-05-06 16:38:59,964 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506163838890-akka.actor.default-dispatcher-14 - Processor actor [Actor[akka://ServiceTest_170506163838890/user/StreamSupervisor-0/flow-3-1-unknown-operation#157156554]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506163838890/user/StreamSupervisor-0/flow-3-1-unknown-operation#157156554]] terminated abruptly
+2017-05-06 16:43:02,631 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506164243093-akka.actor.default-dispatcher-15 - Processor actor [Actor[akka://ServiceTest_170506164243093/user/StreamSupervisor-0/flow-2-1-unknown-operation#832438277]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506164243093/user/StreamSupervisor-0/flow-2-1-unknown-operation#832438277]] terminated abruptly
+2017-05-06 16:49:24,426 [ERROR] from board in ServiceTest_170506164909810-akka.actor.default-dispatcher-20 - Exception in RestCallId{method=PUT, pathPattern='/api/board/:id'}
+UpdateFailureException: Invalid state submited for the board.
+	at UpdateFailureException.<clinit>(UpdateFailureException.java:8) ~[classes/:na]
+	at BoardEntity.lambda$initialBehavior$4(BoardEntity.java:48) ~[classes/:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor$$anonfun$receiveCommand$1.applyOrElse(PersistentEntityActor.scala:136) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) ~[akka-actor_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor.akka$persistence$Eventsourced$$super$aroundReceive(PersistentEntityActor.scala:49) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.persistence.Eventsourced$$anon$1.stateReceive(Eventsourced.scala:664) ~[akka-persistence_2.11-2.4.17.jar:na]
+	at akka.persistence.Eventsourced$class.aroundReceive(Eventsourced.scala:183) ~[akka-persistence_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor.aroundReceive(PersistentEntityActor.scala:49) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) ~[akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
+2017-05-06 16:49:29,637 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506164909810-akka.actor.default-dispatcher-20 - Processor actor [Actor[akka://ServiceTest_170506164909810/user/StreamSupervisor-0/flow-3-1-unknown-operation#58665082]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506164909810/user/StreamSupervisor-0/flow-3-1-unknown-operation#58665082]] terminated abruptly
+2017-05-06 16:52:27,321 [ERROR] from board in ServiceTest_170506165212857-akka.actor.default-dispatcher-17 - Exception in RestCallId{method=PUT, pathPattern='/api/board/:id'}
+UpdateFailureException: Invalid state submited for the board.
+	at UpdateFailureException.<clinit>(UpdateFailureException.java:8) ~[classes/:na]
+	at BoardEntity.lambda$initialBehavior$4(BoardEntity.java:48) ~[classes/:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor$$anonfun$receiveCommand$1.applyOrElse(PersistentEntityActor.scala:136) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) ~[akka-actor_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor.akka$persistence$Eventsourced$$super$aroundReceive(PersistentEntityActor.scala:49) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.persistence.Eventsourced$$anon$1.stateReceive(Eventsourced.scala:664) ~[akka-persistence_2.11-2.4.17.jar:na]
+	at akka.persistence.Eventsourced$class.aroundReceive(Eventsourced.scala:183) ~[akka-persistence_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor.aroundReceive(PersistentEntityActor.scala:49) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) ~[akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
+2017-05-06 16:52:37,584 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506165212857-akka.actor.default-dispatcher-19 - Processor actor [Actor[akka://ServiceTest_170506165212857/user/StreamSupervisor-0/flow-3-1-unknown-operation#246162966]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506165212857/user/StreamSupervisor-0/flow-3-1-unknown-operation#246162966]] terminated abruptly
+2017-05-06 16:54:14,644 [ERROR] from board in ServiceTest_170506165401302-akka.actor.default-dispatcher-3 - Exception in RestCallId{method=PUT, pathPattern='/api/board/:id'}
+UpdateFailureException: Invalid state submited for the board.
+	at UpdateFailureException.<clinit>(UpdateFailureException.java:8) ~[classes/:na]
+	at BoardEntity.lambda$initialBehavior$4(BoardEntity.java:48) ~[classes/:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor$$anonfun$receiveCommand$1.applyOrElse(PersistentEntityActor.scala:136) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:497) ~[akka-actor_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor.akka$persistence$Eventsourced$$super$aroundReceive(PersistentEntityActor.scala:49) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.persistence.Eventsourced$$anon$1.stateReceive(Eventsourced.scala:664) ~[akka-persistence_2.11-2.4.17.jar:na]
+	at akka.persistence.Eventsourced$class.aroundReceive(Eventsourced.scala:183) ~[akka-persistence_2.11-2.4.17.jar:na]
+	at com.lightbend.lagom.internal.javadsl.persistence.PersistentEntityActor.aroundReceive(PersistentEntityActor.scala:49) ~[lagom-javadsl-persistence_2.11-1.3.2.jar:1.3.2]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:526) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:495) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:224) ~[akka-actor_2.11-2.4.17.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:234) ~[akka-actor_2.11-2.4.17.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.8.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.8.jar:na]
+2017-05-06 16:54:34,973 [ERROR] from akka.actor.OneForOneStrategy in ServiceTest_170506165401302-akka.actor.default-dispatcher-3 - Processor actor [Actor[akka://ServiceTest_170506165401302/user/StreamSupervisor-0/flow-3-1-unknown-operation#-1273993009]] terminated abruptly
+akka.stream.AbruptTerminationException: Processor actor [Actor[akka://ServiceTest_170506165401302/user/StreamSupervisor-0/flow-3-1-unknown-operation#-1273993009]] terminated abruptly

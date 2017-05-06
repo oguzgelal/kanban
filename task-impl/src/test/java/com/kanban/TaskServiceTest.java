@@ -106,14 +106,14 @@ public class TaskServiceTest {
     @Test
     public void archievedTasksShouldNotUpdate() throws Exception {
         TaskService service = server.client(TaskService.class);
-        Task mockInsertTask = new Task(null, "testName1", "testDetails1", "testColor1", "testBoardId1", "ARCHIEVED");
+        Task mockInsertTask = new Task(null, "testName1", "testDetails1", "testColor1", "testBoardId1", "ARCHIVED");
 
         // Create a task
         Task taskCreated = service.newTask().invoke(mockInsertTask).toCompletableFuture().get();
         String createdTaskId = taskCreated.getId();
 
         // Update the created task
-        Task mockUpdateTask = new Task(createdTaskId, "testName2", "testDetails2", "testColor2", "testBoardId2", "ARCHIEVED");
+        Task mockUpdateTask = new Task(createdTaskId, "testName2", "testDetails2", "testColor2", "testBoardId2", "ARCHIVED");
 
         try {
             service.updateTask(createdTaskId).invoke(mockUpdateTask).toCompletableFuture().get();
